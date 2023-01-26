@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --main-text-color: rgb(39, 52, 79);
+    --second-text-color: rgba(255, 255, 255, 0.4);
+    --highlited-text-color: rgba(255, 255, 255, 0.9);
+    --btn-color: #3361FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.left-side {
+    background: url('./img/photo.png') no-repeat;
+    background-size: cover;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+.nav {
+    display: flex;
+    justify-content: end
+}
+
+.nav a {
+    font-size: 22px;
+    margin: 0 0.8rem;
+    color: #fff;
+    transition: all 80ms;
+}
+
+.nav a:hover {
+    color: var(--main-text-color);
+    transform: scale(1.1);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    color: var(--second-text-color);
+}
+
+.footer a {
+    color: var(--highlited-text-color);
+}
+
+
+
+.right-side,
+.container {
+    color: rgba(39, 52, 79, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F2F3F5;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+.right-side .avatar {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.right-side h1 {
+    color: var(--main-text-color);
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 70px;
+    margin-bottom: 30px;
+}
+
+
+.right-side .login-with-btns {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.right-side .login-with-btn {
+    padding: 10px 20px 10px 15px;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0px 2px 5px rgba(38, 51, 77, 0.05);
+    border-radius: 5px;
+    border: none;
+    background: #FFFFFF;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.right-side .login-with-btn i {
+    margin: 0 8px;
+    font-size: 1.1rem;
+}
+
+.form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.form input {
+    padding: 20px 25px 20px 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(38, 51, 77, 0.05);
+    border-radius: 5px;
+}
+.form p {
+    margin-left: 14px;
+}
+.form button {
+    padding: 15px 25px;
+    background: var(--btn-color);
+    border: none;
+    box-shadow: 0px 30px 60px rgba(51, 97, 255, 0.15);
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+a.forgot-pwd {
+    color: rgba(39, 52, 79, 0.5);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        display: flex;
+        /* grid-template-columns: 1fr; */
+        height: 100vh;
+        flex-direction: column-reverse;
+    }
+    .right-side{
+        height: 100vh;
+
+    }
+    .left-side {
+        padding: 1rem;
+        background: rgb(84,130,250);
+    }
+    .left-side .nav {
+        display: none;
+    }
+
+    .right-side .avatar {
+        margin-top: 50px;
+    }
+
+}
